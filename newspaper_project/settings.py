@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     # 3rd party
     "crispy_forms", # new
+    "crispy_bootstrap5", # new
     
     # Local
     "users.apps.UsersConfig", # new
@@ -135,4 +136,7 @@ AUTH_USER_MODEL = 'users.CustomUser' # new
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
